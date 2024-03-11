@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanila.js</title>
+</head>
+<style>
+    .product-container{
+        display: grid;
+        gap: 100px 20px;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+
+        margin-top: 100px;
+
+
+        max-width: 700px;
+        margin-inline: auto;
+
+       
+    }
+
+    .buttons{        
+        justify-content: center;
+        display: flex;
+        gap: 50px;
+
+            margin-top: 50px;
+            margin-bottom: 50px;
+& button{
+    width: 100%;
+    max-width: 50px;
+}
+    }
+    .filters{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+</style>
+<body>
+   <div class="buttons">
+     <button >left</button>
+     <button>right</button> 
+</div>
+<div class="filters">
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="price">
+    <input type="text" placeholder="brand">
+   
+</div>
+
+        <ul class="product-container">
+            Loding...
+            
+        </ul>  
+  
+          <script src="
+    https://cdn.jsdelivr.net/npm/js-md5@0.8.3/src/md5.min.js
+    "></script>
+    <script src="./index.js"></script>
+</body>
+</html>
