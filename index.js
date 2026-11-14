@@ -37,7 +37,7 @@ getFromApi({
 
 
             .then((product) => {
-                const noDublicats = {}
+                
 
                 for (let prod in product.result) {
                     if (noDublicats[product.result[prod].id]) {
