@@ -98,7 +98,7 @@ rightBtn.addEventListener('click', () => {
 });
       glav.insertAdjacentHTML(
     'beforebegin',
-    '<p>Демонстрационный режим — показаны тестовые товары.</p>'
+    '<p class="demo-notice">Демонстрационный режим — показаны тестовые товары.</p>'
 );
 document.querySelectorAll('.filters input').forEach((field) => {
     field.addEventListener('input', () => {

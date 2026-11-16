@@ -3,43 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanila.js</title>
+    <title>Vanilass — каталог украшений</title>
 </head>
 <style>
-    .product-container{
+     * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 32px 20px;
+        font-family: Arial, sans-serif;
+        color: #25221f;
+        background: #f7f5f2;
+    }
+
+    h1 {
+        margin: 0 0 28px;
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .buttons button {
+        min-width: 90px;
+        padding: 10px 16px;
+        border: 0;
+        border-radius: 8px;
+        color: white;
+        background: #725746;
+        cursor: pointer;
+    }
+
+    .buttons button:hover {
+        background: #574132;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .filters input {
+        width: 220px;
+        padding: 10px 12px;
+        border: 1px solid #d5cec7;
+        border-radius: 8px;
+        font: inherit;
+    }
+
+    .product-container {
         display: grid;
-        gap: 100px 20px;
-        grid-template-columns: repeat(5, 1fr);
-        justify-items: center;
-
-        margin-top: 100px;
-
-
-        max-width: 700px;
-        margin-inline: auto;
-
-       
+        grid-template-columns: repeat(auto-fit, minmax(220px, 300px));
+        justify-content: center;
+        max-width: 1000px;
+        margin: 36px auto;
+        padding: 0;
+        gap: 18px;
+        list-style: none;
     }
 
-    .buttons{        
-        justify-content: center;
-        display: flex;
-        gap: 50px;
+    .product-container li {
+        display: grid;
+        gap: 8px;
+        align-content: start;
+        min-height: 130px;
+        padding: 18px;
+        border: 1px solid #e8e1da;
+        border-radius: 12px;
+        background: white;
+        box-shadow: 0 3px 12px rgb(50 35 20 / 6%);
+    }
 
-            margin-top: 50px;
-            margin-bottom: 50px;
-& button{
-    width: 100%;
-    max-width: 50px;
+    .product-container li div:nth-child(2) {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .product-container li div:nth-child(3) {
+        color: #725746;
+        font-weight: 700;
+    }
+
+    @media (max-width: 520px) {
+        body {
+            padding: 24px 14px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .filters input {
+            width: 100%;
+        }
+        body > p {
+    margin: 0 auto 24px;
+    text-align: center;
+    color: #6b625b;
 }
-    }
-    .filters{
-        display: flex;
-        justify-content: center;
-        gap: 20px;
+.demo-notice {
+    margin: 0 auto 24px;
+    text-align: center;
+    color: #6b625b;
+    
+}
     }
 </style>
 <body>
+    <h1>Каталог украшений</h1>
    <div class="buttons">
      <button >left</button>
      <button>right</button> 
