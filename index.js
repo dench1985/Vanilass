@@ -185,6 +185,8 @@ return x.every((value) => value === true);
     })
 
     globalProductMax =nootDublicat.length
+    leftBtn.disabled = offset === 0;
+    rightBtn.disabled = offset + limit >= globalProductMax;
 
     const arr = nootDublicat.slice(offset, offset + limit)
        
