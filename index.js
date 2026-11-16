@@ -198,7 +198,12 @@ return x.every((value) => value === true);
         one_li.append(
             divText(arr[i].id),
             divText(arr[i].product),
-            divText(arr[i].price),
+            divText(
+    new Intl.NumberFormat('ru-RU', {
+        style: 'currency',
+        currency: 'RUB'
+    }).format(arr[i].price)
+),
             divText(arr[i].brand)
         )
         glav.append(one_li)
